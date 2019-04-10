@@ -42,11 +42,15 @@
 
 		<!-- ===== Responsive CSS ===== -->
 		<link rel="stylesheet" href="css/responsive.css">
-
-		<!--[===== if lt IE 9]>
-			<script src="js/html5shiv.js"></script>
-			<script src="js/respond.min.js"></script>
-<![endif]===== -->
+		<style>
+			.cet {
+				width: 50%;
+				height: 40%;
+				margin: 0 auto;
+				padding-top: 30px;
+				text-align: center;
+			}
+		</style>
 
 	</head>
 
@@ -417,8 +421,8 @@
 										<img src="images/testimonials/doe1.jpg" alt="">
 									</div>
 									<div class="content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium minus, earum optio amet consequatur vero ipsum saepe quis accusantium! Illum soluta impedit odio fugiat maiores fuga nostrum, molestiae vero sit.</p>
-										<h4>Joni Doe</h4>
+										<p>HE IS A COOL BOY,AND BROWN'S BEST FRIEND.</p>
+										<h4>HUI</h4>
 										<h5>Friend</h5>
 									</div>
 								</div>
@@ -427,9 +431,9 @@
 										<img src="images/testimonials/doe2.jpg" alt="">
 									</div>
 									<div class="content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum delectus sed distinctio provident laboriosam culpa, cumque quasi omnis sit illum velit doloribus voluptate quibusdam laudantium in. Rerum autem, ipsum fugit.</p>
-										<h4>Jonathan Doe</h4>
-										<h5>Friends</h5>
+										<p>KONY AND BROWN MUTUAL FRIEND.</p>
+										<h4>YING</h4>
+										<h5>Friend</h5>
 									</div>
 								</div>
 								<div class="item next left">
@@ -437,8 +441,8 @@
 										<img src="images/testimonials/doe3.jpg" alt="">
 									</div>
 									<div class="content">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quis quod eos placeat iusto, aliquid, dicta odit ipsum facere tenetur aperiam commodi sit nostrum libero reiciendis accusantium, cumque tempora deleniti.</p>
-										<h4>William Doe</h4>
+										<p>SHE IS A OPTIMISTIC GIRL,AND KONY'S BEST FRIEND.</p>
+										<h4>HUI</h4>
 										<h5>Friend</h5>
 									</div>
 								</div>
@@ -455,35 +459,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h2>Contact</h2>
-						<i class="fa fa-heart"></i>
-						<div class="underline"></div>
-						<div class="sub-sub">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elitRepellat, ea laudantium.
-						</div>
-						<!-- ===== Form ===== -->
-						<form class="contact-form" id="contact" role="form">
-						<!-- ===== Succes Send Email ===== -->
-							<h6 class="success">
-                <span class="olored-text icon_check"></span> Your message successfully. </h6>
-							<!-- ===== Error Send Email ===== -->
-							<h6 class="error">
-                <span class="colored-text icon_error-circle_alt"></span> your message sent pending. </h6>
-							<div class="field-wrapper col-md-6">
-								<input class="form-control input-box" id="contact-form-name" type="text" name="contact-form-name" placeholder="Your Name">
-							</div>
-							<div class="field-wrapper col-md-6">
-								<input class="form-control input-box" id="contact-form-email" type="email" name="contact-form-email" placeholder="Email">
-							</div>
-							<div class="field-wrapper col-md-12">
-								<input class="form-control input-box" id="contact-form-subject" type="text" name="contact-form-subject" placeholder="Subject">
-							</div>
-							<div class="field-wrapper col-md-12">
-								<textarea class="form-control textarea-box" id="contact-form-message" rows="7" name="contact-form-message" placeholder="Your Message"></textarea>
-							</div>
-							<button class="btn standard-button" type="submit" id="contact-form-submit" name="submit" data-style="expand-left">Send Message</button>
-						</form>
-						<!-- ===== End Form ===== -->
+						<h2>CET-6倒计时</h2>
+						<div id="cet-6" class="cet"></div>
 					</div>
 				</div>
 			</div>
@@ -526,6 +503,10 @@
 				var loveTime = days + ' Days ' + (hours < 10 ? '0' + hours : hours) + ' Hours ' + (minutes < 10 ? '0' + minutes : minutes) + ' Min ' + (seconds < 10 ? '0' + seconds : seconds) + ' Sec';
 				$('#getting-started').html(loveTime);
 			},1000);
+			$('#cet-6').countdown('2019/06/15 15:00:00', function(event) {
+				$(this).html(event.strftime('%D days %H hours %M min %S sec'));
+			});
+		</script
 		</script>
 
 	</body>
