@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE >
 <html lang="en">
 
 	<head>
@@ -168,7 +168,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- ===== Section Features ===== -->
 		<section id="section-features" class="section-features bgc-one">
 			<div class="container">
@@ -470,7 +470,12 @@
 		<footer class="bgc-two">
 			<div class="container">
 				<div class="copyright">
-					&copy; Author: brown.&nbsp;&nbsp;&nbsp;2019.04.03
+					&copy; <div id="toSurprice" style="display: inline;">Author: brown.</div>&nbsp;&nbsp;&nbsp;2019.04.03
+				</div>
+				<div id="surprice" class="hidden">
+					<video id="proposal" height="388" width="690" controls="true" controlslist="nodownload" muted="false">
+						<source src="video/proposal.mp4" type="audio/mp4"></source>
+					</video>
 				</div>
 			</div>
 		</footer>
@@ -492,21 +497,30 @@
 		<script src="js/jquery.countdown.min.js"></script>
 		<script src="js/custom.js"></script>
 		<script type="text/javascript">
-			var startTime = new Date(2018,3-1,19,0,0,0);
-			window.setInterval(function(){
-				var nowTime = new Date();
-				var gaps = (nowTime.getTime()-startTime.getTime())/1000;
-				var days = parseInt(gaps/(60*60*24));
-				var hours = parseInt((gaps - days*60*60*24)/(60*60));
-				var minutes = parseInt((gaps - days*60*60*24 - hours*60*60)/60);
-				var seconds = parseInt(gaps - days*60*60*24 - hours*60*60 - minutes*60);
-				var loveTime = days + ' Days ' + (hours < 10 ? '0' + hours : hours) + ' Hours ' + (minutes < 10 ? '0' + minutes : minutes) + ' Min ' + (seconds < 10 ? '0' + seconds : seconds) + ' Sec';
-				$('#getting-started').html(loveTime);
-			},1000);
-			$('#cet-6').countdown('2019/06/15 15:00:00', function(event) {
-				$(this).html(event.strftime('%D days %H hours %M min %S sec'));
+			$(function() {
+				var startTime = new Date(2018, 3 - 1, 19, 0, 0, 0);
+				window.setInterval(function() {
+					var nowTime = new Date();
+					var gaps = (nowTime.getTime() - startTime.getTime()) / 1000;
+					var days = parseInt(gaps / (60 * 60 * 24));
+					var hours = parseInt((gaps - days * 60 * 60 * 24) / (60 * 60));
+					var minutes = parseInt((gaps - days * 60 * 60 * 24 - hours * 60 * 60) / 60);
+					var seconds = parseInt(gaps - days * 60 * 60 * 24 - hours * 60 * 60 - minutes * 60);
+					var loveTime = days + ' Days ' + (hours < 10 ? '0' + hours : hours) + ' Hours ' + (minutes < 10 ? '0' + minutes : minutes) + ' Min ' + (seconds < 10 ? '0' + seconds : seconds) + ' Sec';
+					$('#getting-started').html(loveTime);
+				}, 1000);
+				$('#cet-6').countdown('2019/06/15 15:00:00', function(event) {
+					$(this).html(event.strftime('%D days %H hours %M min %S sec'));
+
+				});
+				$('#toSurprice').click(function(){
+					if($('#surprice').hasClass('hidden')){
+						$('#surprice').removeClass('hidden');
+					}else{
+						$('#surprice').addClass('hidden');
+					}
+				});
 			});
-		</script
 		</script>
 
 	</body>
