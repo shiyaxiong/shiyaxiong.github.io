@@ -105,7 +105,7 @@
 					</div>
 					<!-- ===== End Sticky Navigation ===== -->
 				</div>
-				<!-- ===== Welcome ===== -->
+				<!-- ===== 爱的时长 ===== -->
 				<div class="container">
 					<div class="row">
 						<div class="col-md-10 col-md-offset-1 distance-header">
@@ -116,7 +116,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- ===== End Welcome ===== -->
+				<!-- ===== End 爱的时长 ===== -->
 			</div>
 		</header>
 
@@ -172,12 +172,12 @@
 		<!-- ===== Section Features ===== -->
 		<section id="section-features" class="section-features bgc-one">
 			<div class="container">
-				<h2>Events</h2>
+				<h2>瞬间</h2>
 				<i class="fa fa-heart"></i>
 				<div class="underline">
 				</div>
 				<div class="sub-sub">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit Reprehenderit.
+					这里记录了我们之间值得纪念的爱的瞬间。
 				</div>
 				<div class="features">
 					<div class="row">
@@ -388,11 +388,11 @@
 						</div>
 
 						<div class="portfolio-images">
-							<a href="images/portfolio/2.png" data-lightbox-gallery="portfolio-gallery"><img src="images/portfolio/2.png" alt="portfolio"></a>
+							<a href="images/portfolio/4.png" data-lightbox-gallery="portfolio-gallery"><img src="images/portfolio/4.png" alt="portfolio"></a>
 						</div>
 
 						<div class="portfolio-images">
-							<a href="images/portfolio/3.jpg" data-lightbox-gallery="portfolio-gallery"><img src="images/portfolio/3.jpg" alt="portfolio"></a>
+							<a href="images/portfolio/1.jpg" data-lightbox-gallery="portfolio-gallery"><img src="images/portfolio/1.jpg" alt="portfolio"></a>
 						</div>
 
 						<div class="portfolio-images">
@@ -432,7 +432,7 @@
 									</div>
 									<div class="content">
 										<p>KONY AND BROWN MUTUAL FRIEND.</p>
-										<h4>YING</h4>
+										<h4>YIN</h4>
 										<h5>Friend</h5>
 									</div>
 								</div>
@@ -459,8 +459,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
-						<h2>CET-6倒计时</h2>
-						<div id="cet-6" class="cet"></div>
+						<h2>旅行倒计时</h2>
+						<div id="tour" class="cet"></div>
 					</div>
 				</div>
 			</div>
@@ -470,7 +470,7 @@
 		<footer class="bgc-two">
 			<div class="container">
 				<div class="copyright">
-					&copy; <div id="toSurprice" style="display: inline;">Author: brown.</div>&nbsp;&nbsp;&nbsp;2019.04.03
+					&copy; <div style="display: inline;">Author: brown.</div>&nbsp;&nbsp;&nbsp;2019.04.03
 				</div>
 				<div id="surprice" class="hidden">
 					<video id="proposal" height="388" width="690" controls="true" controlslist="nodownload" muted="false">
@@ -509,16 +509,9 @@
 					var loveTime = days + ' Days ' + (hours < 10 ? '0' + hours : hours) + ' Hours ' + (minutes < 10 ? '0' + minutes : minutes) + ' Min ' + (seconds < 10 ? '0' + seconds : seconds) + ' Sec';
 					$('#getting-started').html(loveTime);
 				}, 1000);
-				$('#cet-6').countdown('2019/06/15 15:00:00', function(event) {
+				$('#tour').countdown('2019/06/08 10:50:00', function(event) {
 					$(this).html(event.strftime('%D days %H hours %M min %S sec'));
 
-				});
-				$('#toSurprice').click(function(){
-					if($('#surprice').hasClass('hidden')){
-						$('#surprice').removeClass('hidden');
-					}else{
-						$('#surprice').addClass('hidden');
-					}
 				});
 			});
 		</script>
