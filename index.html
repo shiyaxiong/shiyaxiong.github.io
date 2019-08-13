@@ -331,6 +331,18 @@
 								</p>
 							</div>
 						</div>
+						<div class="col-md-4">
+							<div class="feature">
+								<div class="icon">
+									<i class="fa fa-heart"></i>
+								</div>
+								<h4>2019年8月4号</h4>
+								<p>
+									我们开始了异地，每天都很想你。<br>
+									<div id="diffLove"></div>
+								</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -599,6 +611,18 @@
 					$(this).html(event.strftime('%D days %H hours %M min %S sec'));
 
 				});*/
+				
+				var diffLoveStartTime = new Date(2019, 8 - 1, 4, 15, 0, 0);
+				window.setInterval(function() {
+					var newNowTime = new Date();
+					var newGaps = (newNowTime.getTime() - diffLoveStartTime.getTime()) / 1000;
+					var newDays = parseInt(newGaps / (60 * 60 * 24));
+					var newHours = parseInt((newGaps - newDays * 60 * 60 * 24) / (60 * 60));
+					var newMinutes = parseInt((newGaps - newDays * 60 * 60 * 24 - newHours * 60 * 60) / 60);
+					var newSeconds = parseInt(newGaps - newDays * 60 * 60 * 24 - newHours * 60 * 60 - newMinutes * 60);
+					var newLoveTime = newDays + ' Days ' + (newHours < 10 ? '0' + newHours : newHours) + ' Hours ' + (newMinutes < 10 ? '0' + newMinutes : newMinutes) + ' Min ' + (newSeconds < 10 ? '0' + newSeconds : newSeconds) + ' Sec';
+					$('#diffLove').html(newLoveTime);
+				}, 1000);
 			});
 		</script>
 
