@@ -142,7 +142,7 @@ li {
     height: 50px;
 }
 #getting-started {
-	font-size: 40px;
+	font-size: 25px;
 	color: #ffffff;
 	margin: 60px 0;
 	background-color: rgba(0, 0, 0, 0.81);
@@ -180,7 +180,6 @@ h6 {
 	margin-bottom: 0;
 	margin-top: 0;
 }
-
 h1 {
 	font-size: 3rem;
 	line-height: 3.75rem;
